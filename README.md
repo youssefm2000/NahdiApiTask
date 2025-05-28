@@ -1,4 +1,9 @@
-# API Automation Testing Framework
+<div align="center">
+ <img  src="https://user-images.githubusercontent.com/68038931/147390936-c6228337-9787-4aab-b5d6-826bc8e4e4a3.gif" alt="test-light" width="1000" height="250" />
+ </div>
+
+ <div align="center">
+      <h1>  API Automation Testing Framework"   </h1>
 
 ## 📌 Features
 - ### 🔍️ Covered Test case in this project :
@@ -44,4 +49,9 @@
  ### 📝 Allure Report:
 
 ![allureReport](https://github.com/user-attachments/assets/8132c19a-18b3-416d-ab91-60f230dbe6da)
+
+ ### 📝 Cucumber Report:
+ 
+ ![Image](https://github.com/user-attachments/assets/b6e1ef5c-309b-4883-98f3-a8615504c4da)
+
 
