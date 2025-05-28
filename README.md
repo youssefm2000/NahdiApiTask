@@ -26,10 +26,7 @@
     And the response should contain ID 20
 
  #### ✅Test Case 4 : Get non-existent post
-   Given the API is available
-    When I retrieve the post with ID 20
-    Then the response status should be 200
-    And the response should contain ID 20
+  Given the API is available When I retrieve the post with ID 9999 Then the response status should 
 
 
 
