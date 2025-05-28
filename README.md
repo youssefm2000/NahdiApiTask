@@ -3,24 +3,33 @@
  </div>
 
  <div align="center">
-      <h1>  API Automation Testing Framework"   </h1>
+      <h1> API Automation Testing With Cucumber Framework </h1>
 
 ## 📌 Features
 - ### 🔍️ Covered Test case in this project :
-#### ✅Test Case : End To End Test Case
-1. Open the General Store app on an Android device (real or emulator).
-2. Select Egypt from the country dropdown.
-3. Enter the user's name in the input field.
+#### ✅Test Case 1 : Create a new post
+   Given the API is available
+    When I create a post with title "foo", body "bar" and userId 1
+    Then the response status should be 201
+    And the response should contain title "foo" and body "bar"
 
-#### ✅Test Case : End To End Test Case
-1. Open the General Store app on an Android device (real or emulator).
-2. Select Egypt from the country dropdown.
-3. Enter the user's name in the input field.
+#### ✅Test Case 2 : Get all posts
+   Given the API is available
+    When I retrieve all posts
+    Then the response status should be 200
+    And the total number of posts should be 100
 
-#### ✅Test Case : End To End Test Case
-1. Open the General Store app on an Android device (real or emulator).
-2. Select Egypt from the country dropdown.
-3. Enter the user's name in the input field.
+#### ✅Test Case 3 : Get post with ID 20
+   Given the API is available
+    When I retrieve the post with ID 20
+    Then the response status should be 200
+    And the response should contain ID 20
+
+ #### ✅Test Case 4 : Get non-existent post
+   Given the API is available
+    When I retrieve the post with ID 20
+    Then the response status should be 200
+    And the response should contain ID 20
 
 
 
@@ -54,4 +63,7 @@
  
  ![Image](https://github.com/user-attachments/assets/b6e1ef5c-309b-4883-98f3-a8615504c4da)
 
+ ### 🚀 For Watching Running Test Cases:
+ 
+   https://youtu.be/FvKjAGaXQBQ
 
