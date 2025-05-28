@@ -29,12 +29,8 @@
 - JSON for request/response payloads
 
 ## 📂 Project Structure
+
 ![Image](https://github.com/user-attachments/assets/24e97b90-8726-41db-beac-1759bdd73271)
-
-
-
-
-
 
 
  ### 🏗️ Project Design:
