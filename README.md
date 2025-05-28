@@ -36,8 +36,9 @@
 - Cucumber
 - Rest Assured
 - Maven
-- JUnit/TestNG (depending on your setup)
-- JSON for request/response payloads
+- JUnit
+- POJO
+- Jackson 
 
 ## 📂 Project Structure
 
