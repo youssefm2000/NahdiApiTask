@@ -37,3 +37,11 @@
 
  * Page Object Model (POM) design pattern
 
+### 🚧 Requirements
+
+* Eclipse / IntelliJ IDEA (for code development)
+
+ ### 📝 Allure Report:
+
+![allureReport](https://github.com/user-attachments/assets/8132c19a-18b3-416d-ab91-60f230dbe6da)
+
