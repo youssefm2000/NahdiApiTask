@@ -3,7 +3,6 @@ import io.restassured.response.Response;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
 import static io.restassured.RestAssured.*;
 
 /**
@@ -43,7 +42,7 @@ public class Helper {
     public static Response postRequest(String endpoint, Object body) {
         return given()
                 .header("Content-Type", "application/json")
-                .body(body) // Serialize the object to JSON
+                .body(body) 
                 .when()
                 .post(baseUrl + endpoint);
     }
