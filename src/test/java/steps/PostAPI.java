@@ -21,7 +21,7 @@ public class PostAPI {
     @Severity(SeverityLevel.NORMAL)
     @Description("check if the API is reachable and responding with HTTP 200")
     @Given("the API is available")
-    public void the_api_is_available() {
+    public void checkApiIsAvailable() {
         response = Helper.getRequest(Endpoints.POSTS);
         assertThat("API is not available", response.getStatusCode(), is(200));
     }
@@ -35,7 +35,7 @@ public class PostAPI {
     @Severity(SeverityLevel.CRITICAL)
     @Description("This test create a new post via the POST endpoint")
     @When("I create a post with title {string}, body {string} and userId {int}")
-    public void i_create_a_post(String title, String body, int userId) {
+    public void createPost(String title, String body, int userId) {
         Post post = new Post(title, body, userId);
         response = Helper.postRequest(Endpoints.POSTS, post);
     }
@@ -49,7 +49,7 @@ public class PostAPI {
     @Severity(SeverityLevel.NORMAL)
     @Description("This test retrieve all posts via the GET endpoint")
     @When("I retrieve all posts")
-    public void i_retrieve_all_posts() {
+    public void retrieveAllPosts() {
         response = Helper.getRequest(Endpoints.POSTS);
     }
 
@@ -62,7 +62,7 @@ public class PostAPI {
     @Severity(SeverityLevel.NORMAL)
     @Description("This test retrieve retrieve a specific post by its ID via the GET endpoint")
     @When("I retrieve the post with ID {int}")
-    public void i_retrieve_post_by_id(int id) {
+    public void retrievePostById(int id) {
         response = Helper.getRequest(Endpoints.POSTS + "/" + id);
     }
 
@@ -75,7 +75,7 @@ public class PostAPI {
     @Severity(SeverityLevel.NORMAL)
     @Description("validate that the response status code matches the expected one")
     @Then("the response status should be {int}")
-    public void the_response_status_should_be(int statusCode) {
+    public void validateResponseStatus(int statusCode) {
         assertThat(response.getStatusCode(), equalTo(statusCode));
     }
 
@@ -88,7 +88,7 @@ public class PostAPI {
     @Severity(SeverityLevel.NORMAL)
     @Description("verify that the response contains specific title and body values")
     @Then("the response should contain title {string} and body {string}")
-    public void the_response_should_contain_title_and_body(String title, String body) {
+    public void verifyResponseTitle(String title, String body) {
         assertThat(response.jsonPath().getString("title"), equalTo(title));
         assertThat(response.jsonPath().getString("body"), equalTo(body));
     }
@@ -102,7 +102,7 @@ public class PostAPI {
     @Severity(SeverityLevel.NORMAL)
     @Description("verify the total number of posts returned by the API")
     @Then("the total number of posts should be {int}")
-    public void the_total_number_of_posts_should_be(int total) {
+    public void verifyNumOfPosts(int total) {
         assertThat(response.jsonPath().getList("$").size(), equalTo(total));
     }
 
@@ -115,7 +115,7 @@ public class PostAPI {
     @Severity(SeverityLevel.NORMAL)
     @Description("verify the response contains the expected post ID")
     @Then("the response should contain ID {int}")
-    public void the_response_should_contain_id(int id) {
+    public void assertResponseId(int id) {
         assertThat(response.jsonPath().getInt("id"), equalTo(id));
     }
 }
